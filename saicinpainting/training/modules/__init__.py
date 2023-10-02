@@ -5,7 +5,7 @@ from saicinpainting.training.modules.pix2pixhd import GlobalGenerator, MultiDila
     NLayerDiscriminator, MultidilatedNLayerDiscriminator
 
 def make_generator(config, kind, **kwargs):
-    logging.info(f'Make generator {kind}')
+    # logging.info(f'Make generator {kind}')
 
     if kind == 'pix2pixhd_multidilated':
         return MultiDilatedGlobalGenerator(**kwargs)
@@ -20,7 +20,7 @@ def make_generator(config, kind, **kwargs):
 
 
 def make_discriminator(kind, **kwargs):
-    logging.info(f'Make discriminator {kind}')
+    # logging.info(f'Make discriminator {kind}')
 
     if kind == 'pix2pixhd_nlayer_multidilated':
         return MultidilatedNLayerDiscriminator(**kwargs)

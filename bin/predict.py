@@ -63,6 +63,7 @@ def main(predict_config: OmegaConf):
             predict_config.indir += '/'
 
         dataset = make_default_val_dataset(predict_config.indir, **predict_config.dataset)
+        # print(f"!!! len(dataset) = {len(dataset)}")
         for img_i in tqdm.trange(len(dataset)):
             mask_fname = dataset.mask_filenames[img_i]
             cur_out_fname = os.path.join(

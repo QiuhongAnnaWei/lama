@@ -16,7 +16,7 @@ def make_training_model(config):
     kwargs.pop('kind')
     kwargs['use_ddp'] = config.trainer.kwargs.get('accelerator', None) == 'ddp'
 
-    logging.info(f'Make training model {kind}')
+    # logging.info(f'Make training model {kind}')
 
     cls = get_training_model_class(kind)
     return cls(config, **kwargs)
